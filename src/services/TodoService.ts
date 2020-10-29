@@ -16,12 +16,4 @@ export class TodoService implements ITodoService {
     save(todo: Todo): void {
         this.todoRepository.save(todo)
     }
-
-    update(id: number, todo: Todo): Todo {
-        throw new Error("Method not implemented.");
-    }
-    
-    delete(id: number): void {
-        throw new Error("Method not implemented.");
-    }
 }
