@@ -6,9 +6,9 @@ export class TodoRouter implements IRouter {
     private routes = Router()
     
     constructor(private todoController: ITodoController) {
-        this.routes.get('/', this.todoController.getAll)
-        this.routes.get('/:id', this.todoController.getOne)
-        this.routes.post('/', this.todoController.save)
+        this.routes.get('/', (req, res) => this.todoController.getAll(req, res))
+        this.routes.get('/:id', (req, res) => this.todoController.getOne(req, res))
+        this.routes.post('/', (req, res) => this.todoController.save(req, res))
     }
 
     getRoutes() {
